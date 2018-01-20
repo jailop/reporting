@@ -1,0 +1,133 @@
+body {
+    font-family: "Ubuntu", "Muli", sans-serif;
+    font-size: 14px;
+    /*
+    background: #01b1af;
+    */
+    height: 100%;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+fieldset {
+    max-width: 520px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 90%;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #999;
+}
+
+td {
+    vertical-align: top;
+    padding: 5px;
+}
+
+.alert {
+    color: red;
+    font-size: 80%;
+}
+
+.TicketHeader {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.TicketComment {
+    max-width: 560px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.ColoredBox {
+    break-after: always;
+    border: 1px #999 solid;
+    padding: 20px;
+    margin: 20px;
+    background: #ddffff;
+    flex-basis: 28%;
+}
+
+.SimpleBox {
+    break-after: always;
+    border: 1px #999 solid;
+    padding: 20px;
+    margin: 10px;
+    width: 600px;
+    background: white;
+    flex-basis: 60%; 
+}
+
+.TColoredBox {
+    border: 1px #999 solid;
+    padding: 20px;
+    margin: 20px;
+    background: #ddffff;
+    min-width: 240px;
+    max-width: 360px;
+}
+
+.TSimpleBox {
+    border: 1px #999 solid;
+    padding: 20px;
+    margin: 10px;
+    width: 600px;
+    background: white;
+    min-width: 240px;
+    max-width: 360px;
+}
+
+
+.CenteredContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input[type=file] {
+
+}
+
+textarea, input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-family: "Muli", sans-serif;
+}
+
+textarea {
+    width: 90%;
+    height: 320px;
+}
+
+.bg {
+        background-image: url("/static/images/citizes.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
+

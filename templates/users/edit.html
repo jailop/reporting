@@ -1,0 +1,33 @@
+{% extends "../base.html" %}
+
+{% block title %}
+Datos de usuario
+{% end %}
+
+{% block content %}
+<h1>Datos de usuario</h1>
+<div class="row">
+    <form action="/users/{{ user['ID'] }}" method="post">
+        <fieldset>
+            <label>Nombre</label>
+            <input class="u-full-width" type="text" name="name" value="{{ user['name'] }}">
+        </fieldset>
+        <fieldset>
+            <label>Correo</label>
+            <input class="u-full-width" type="email" name="email" value="{{ user['email'] }}">
+        </fieldset>
+        <fieldset>
+            <label>Rol</label>
+            <select class="u-full-width" name="role">
+                {% for role in roles.keys() %}
+                <option value="{{ role }}" 
+                {% if role == user['role'] %}
+                    selected
+                {% end %}>{{ roles[role] }}</option>
+                {% end %}
+            </select>
+        </fieldset>
+        <button>Enviar</button>
+    </form>
+</div>
+{% end %}

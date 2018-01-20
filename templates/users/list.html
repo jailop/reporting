@@ -1,0 +1,24 @@
+{% extends "../base.html" %}
+
+{% block title %}
+Listado de usuarios
+{% end %}
+
+{% block content %}
+<div class="row">
+    <h1>Usuarios</h1>
+    <a href="/users/0">Nuevo</a>
+    <table>
+        <th>
+            <td>Nombre</td>
+            <td>Rol</td>
+        </th>
+        {% for user in users %}
+            <tr>
+                <td>user['name']</td>
+                <td>user['role']</td>
+            </tr>
+        {% end %}
+    </table>
+</div>
+{% end %}
