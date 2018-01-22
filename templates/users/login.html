@@ -1,0 +1,29 @@
+{% extends "../base.html" %}
+
+{% block title %}
+Contraseña
+{% end %}
+
+{% block content %}
+<div class="row">
+    <h1>Login</h1>
+    {% if messages %}
+        <p>{{ messages }}</p>
+    {% end %}
+    <form action="/login" method="post">
+        <fieldset>
+            <label>Correo electrónico</label>
+            <input type="text" name="email">
+        </fieldset>
+        <fieldset>
+            <label>Contraseña</label>
+            <input type="password" name="password">
+        </fieldset>
+        <fieldset>
+            <label>Recordar</label>
+            <input type="checkbox" name="remember">
+        </fieldset>
+        <button>Enviar</button>
+    </form>
+</div>
+{% end %}

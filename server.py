@@ -9,6 +9,8 @@ from tornado.httpserver import HTTPServer
 application = web.Application([
     (r"/users", users.List),
     (r"/users/([0-9]+)", users.Edit),
+    (r"/users/([0-9]+)/password", users.Password),
+    (r"/login", users.Login),
     (r"/(.*)", web.StaticFileHandler, {'path': 'static/'}),
 ], debug=True)
 

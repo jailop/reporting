@@ -9,14 +9,14 @@ Listado de usuarios
     <h1>Usuarios</h1>
     <a href="/users/0">Nuevo</a>
     <table>
-        <th>
-            <td>Nombre</td>
-            <td>Rol</td>
-        </th>
+        <tr>
+            <th>Nombre</th>
+            <th>Rol</th>
+        </tr>
         {% for user in users %}
             <tr>
-                <td>user['name']</td>
-                <td>user['role']</td>
+                <td>{{ user['name'] }}</td>
+                <td>{{ user['role'] }}</td>
             </tr>
         {% end %}
     </table>
