@@ -108,6 +108,5 @@ class Login(web.RequestHandler):
                 valid = user['password'] == encrypt(password)
         if valid:
             messages += 'Registro exitoso. Bienvenido(a). '
-            self.set_secure_cookie('user', user['_id'])
+            self.set_secure_cookie('user', str(user['_id']))
         self.write(loader.load('users/login.html').generate(messages=messages))
-        

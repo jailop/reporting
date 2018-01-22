@@ -12,7 +12,7 @@ application = web.Application([
     (r"/users/([0-9]+)/password", users.Password),
     (r"/login", users.Login),
     (r"/(.*)", web.StaticFileHandler, {'path': 'static/'}),
-], debug=True)
+], debug=trust.debug, cookie_secret=trust.secret)
 
 if __name__ == '__main__':
     http = HTTPServer(
